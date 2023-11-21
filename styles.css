@@ -311,7 +311,17 @@ canvas:hover {
 		order: 0;
 	}
 
+	.portfolio :nth-child(5) > video {
+		order: 0;
+	}
+
 	.portfolio :nth-child(3) > .portfolio-text-content {
+		padding-left: 0;
+		padding-right: 0rem;
+		padding-inline: 1rem;
+	}
+
+	.portfolio :nth-child(5) > .portfolio-text-content {
 		padding-left: 0;
 		padding-right: 0rem;
 		padding-inline: 1rem;
