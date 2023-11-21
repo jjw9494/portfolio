@@ -30,7 +30,6 @@ body {
 	background-color: rgb(0, 0, 0);
 	border-radius: 50%;
 	position: absolute;
-	transform: translate(-50%, -50%);
 	pointer-events: none;
 	z-index: 8888;
 }
@@ -120,6 +119,13 @@ canvas:hover {
 	gap: 4rem;
 }
 
+.skills-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	padding-inline: 7rem;
+	gap: 4rem;
+}
+
 /* Portfolio section */
 
 .portfolio {
@@ -137,17 +143,18 @@ canvas:hover {
 	font-family: "PP-italic";
 	font-size: 2.2rem;
 	padding-inline: 7rem;
-	margin-bottom: 3rem;
 }
 
 .portfolio-grid-item {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	padding-inline: 7rem;
-	margin-bottom: 3rem;
+	margin-bottom: 1rem;
+	align-items: center;
+	justify-content: center;
 }
 
-.portfolio :nth-child(3) > img {
+.portfolio :nth-child(3) > video {
 	order: 2;
 }
 
@@ -156,7 +163,16 @@ canvas:hover {
 	padding-right: 4rem;
 }
 
-.portfolio-grid-item > img {
+.portfolio :nth-child(5) > video {
+	order: 2;
+}
+
+.portfolio :nth-child(5) > .portfolio-text-content {
+	padding-left: 0;
+	padding-right: 4rem;
+}
+
+.portfolio-grid-item > video {
 	height: 522px;
 	width: 522px;
 	filter: drop-shadow(0px 4px 10px #0000006e);
@@ -256,6 +272,18 @@ canvas:hover {
 		padding-inline: 1rem;
 	}
 
+	.skills-grid {
+		padding: 0;
+		grid-template-columns: 1fr 1fr;
+		padding-inline: 0;
+		gap: 2rem;
+	}
+
+	.skills-grid > p {
+		margin: 0;
+		padding-inline: 1rem;
+	}
+
 	/* Portfolio section */
 
 	.portfolio {
@@ -279,7 +307,7 @@ canvas:hover {
 		margin-bottom: 3rem;
 	}
 
-	.portfolio :nth-child(3) > img {
+	.portfolio :nth-child(3) > video {
 		order: 0;
 	}
 
@@ -289,7 +317,7 @@ canvas:hover {
 		padding-inline: 1rem;
 	}
 
-	.portfolio-grid-item > img {
+	.portfolio-grid-item > video {
 		align-self: center;
 		height: 400px;
 		width: 400px;
